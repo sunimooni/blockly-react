@@ -1,6 +1,6 @@
 import React from 'react';
 
-function food({fav}){
+function Food({fav}){
   return (<h2>i like {fav}</h2>);
 }
 
@@ -8,10 +8,10 @@ function App() {
   return (
     <div>
       <h1>hello</h1>
-      <food fav ="kimchi" />
-      <food fav ="ramen" />
-      <food fav ="kimbam" />
-      <food fav ="ddukguk" />
+      <Food fav ="kimchi" />
+      <Food fav ="ramen" />
+      <Food fav ="kimbam" />
+      <Food fav ="ddukguk" />
     </div>
   );
 }
