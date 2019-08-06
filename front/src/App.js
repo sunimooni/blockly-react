@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Food({ name, picture }){
-  return (
+  return <div>
     <h2>i like {name}</h2>
-    <img src={picture}></img>
-  );
+    <img src = {picture}></img>
+  </div>
 }
 
 const foodILike = [
