@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from "prop-types";
 
 function Food({ name, picture, rating }){
   return <div>
