@@ -1,4 +1,4 @@
-import react from "react";
+import react from 'react';
 import PropTypes from "prop-types";
 
 // state 가 필요 없을 경우 function오로
