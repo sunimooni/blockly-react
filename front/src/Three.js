@@ -8,9 +8,9 @@ class Three extends React.Component{
     };
     // 여기서 data를 fetch 한 것이다.
     componentDidMount(){
-        setTimeout(() => {
+    /*    setTimeout(() => {
             this.setState({ isLoading : false });
-        }, 6000);
+        }, 6000);*/
         axios.get("https://yts-proxy.now.sh/list_movies.json");
 
     }
