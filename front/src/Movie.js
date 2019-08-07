@@ -4,7 +4,14 @@ import propTypes from "prop-types";
 // state 가 필요 없을 경우 function오로
 
 function Movie({id, year, title, summary, poster}){
-    return <h1>{title}</h1>;
+    return <div class = "movie">
+        <img src={poster} alt={title} title={title}></img>
+        <div class="movie_data">
+            <h3 class="movie_title">{title}</h3>
+            <h5 class="movie_year">{year}</h5>
+            <p class="movie_summary">{summary}</p>
+        </div>
+    </div>;
 }
 
 Movie.propTypes = {
