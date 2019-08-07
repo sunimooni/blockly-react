@@ -17,7 +17,7 @@ class Three extends React.Component{
     /*    setTimeout(() => {
             this.setState({ isLoading : false });
         }, 6000);*/
-        this.getMovies(;)
+        this.getMovies()
     }
     render() {
         const { isLoading } = this.state;
