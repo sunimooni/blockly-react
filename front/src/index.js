@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Two from './Two';
+import Three from './Three';
 
 
-ReactDOM.render(<Two />, document.getElementById('root'));
+ReactDOM.render(<Three />, document.getElementById('root'));

@@ -5,6 +5,10 @@ import React from 'react';
 
 // Two class를 react component로 만듬
 class Two extends React.Component{
+    constructor(props){
+        super(props);
+        console.log("constructor first");
+    }    
     state = {
         count: 0
     };
@@ -16,7 +20,18 @@ class Two extends React.Component{
     minus = () => {
         this.setState(current => ({ count : current.count - 1 }));
     };
+    componentDidMount(){
+        console.log("didmount third");
+    }
+    componentDidUpdate(){
+        console.log("didupdate update");
+    }
+    componentWillUnmount(){
+        console.log("bye");
+    };
+
     render(){
+        console.log("render second");
         return (
             <div>     
                 <h1>i am a class component {this.state.count}</h1>
