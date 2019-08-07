@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 // state 가 필요 없을 경우 function오로
 
 function Movie({id, year, title, summary, poster}){
-    return <div>
+    return (<div>
             <h1>{title}</h1>
-        </div>
+        </div>);
 }
 
 Movie.PropTypes = {
