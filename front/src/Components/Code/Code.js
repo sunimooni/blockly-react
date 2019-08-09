@@ -6,13 +6,20 @@ import BlocklyDrawer, {Block, Category} from 'react-blockly-drawer';
 import './Code.css';
 
 class Code extends React.Component{
-    render(){
+	state = {
+		result : "empty"
+	};
+	render(){
+		const { result } = this.state;
         return (
 			<section className="code_blank">
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
+							this.setState({
+								result : code 
+							});
 							console.log(code, workspace);
 						}}
 						appearance={
@@ -37,8 +44,10 @@ class Code extends React.Component{
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
-					<div className = "code_coded"> 
-					
+					<div className = "code_coded">
+						<div className = "terminal">
+							{ result }
+						</div>
 					</div>
 				</div>
 			</section>
