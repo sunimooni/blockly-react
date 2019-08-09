@@ -18,6 +18,7 @@ class Code extends React.Component{
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
 							result = code;
+							console.log(result);
 							console.log(code, workspace);
 						}}
 						appearance={
