@@ -36,8 +36,10 @@ class Code extends React.Component{
 					</BlocklyDrawer>
 				</div>
 				<div className = "code_generation">
-					<h3>python code</h3>
-					<div className = "code_coded"> </div>
+					<div className = "code_gen"><h2>python code</h2></div>
+					<div className = "code_coded"> 
+					
+					</div>
 				</div>
 			</section>
 		)
