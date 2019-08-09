@@ -89,11 +89,16 @@ const test_operation = {
 		init : function(){
 			this.jsonInit(
 				{
-					type : "field_dropdown",
-					name : "select",
-					option : [
-						["+","+"],["-","-"],["*","*"],["/","/"]
-					]
+					message0 : '%1',
+					args0 : [{
+						type : 'field_dropdown',
+						name : 'select',
+						options : [
+							["+","+"],["-","-"],["*","*"],["/","/"]
+						],
+					},],
+					colour : 120,
+					tooltip : '+-*/',
 				}
 			);
 		},
