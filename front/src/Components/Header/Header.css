@@ -21,11 +21,3 @@
     height: 100%;
     text-align: right;
 }
-.User_Info > ul {
-    list-style: none;
-    display: inline;
- }
-.User_Info > li {
-    color: white;
-    display: inline;
-}

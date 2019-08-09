@@ -9,10 +9,7 @@ class Header extends React.Component{
                     <h1>DDUK DDAK LEARNING</h1>
                 </div>
                 <div className="User_Info">
-                    <ul>
-                        <li>SignIn</li>
-                        <li>Learn</li>
-                    </ul>
+
                 </div>
             </div> 
         )
