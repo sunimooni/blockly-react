@@ -19,8 +19,8 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onChange={async (code, workspace) => {
-							await this.get_result(code);
+						onChange={(code, workspace) => {
+
 							console.log(code, workspace);
 						}}
 						appearance={
