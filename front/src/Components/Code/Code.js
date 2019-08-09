@@ -9,8 +9,8 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
-	get_result = (code) => {
-		this.setState({ result : code })
+	get_result = async(code) => {
+		await this.setState({ result : code })
 	}
 	render(){
 		const {result} = this.state;
