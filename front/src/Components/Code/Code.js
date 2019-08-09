@@ -151,8 +151,8 @@ const short_math = {
 					colour : 360,
 					tooltip : 'short version of arithmetic calculations',
 					inputsInline : true,
-					nextStatement : null,
-					previousStatement : null,
+//					nextStatement : null,
+//					previousStatement : null,
 				}
 			);
 		},
