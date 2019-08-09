@@ -73,8 +73,9 @@ const test_print = {
 						message0 : 'print %1',
 						args0 : [{
 							type : 'field_input',
-							name : 'print',
+							name : 'PRINT',
 						},],
+						output : 'String',
 						colour : 100,
 						tooltip : 'print(_)',
 				}
@@ -82,8 +83,8 @@ const test_print = {
 		},
 	},
     generator: (block) => {
-		const message = `'${block.getFieldValue('print')}'` || '\'\'';
-		const code = `${message}`;
+		const message = `'${block.getFieldValue('PRINT')}'` || '\'\'';
+		const code = `console.log('Hello ${message}')`;
 		return [code, Blockly.JavaScript.ORDER_MEMBER];
 	  },  
 };
