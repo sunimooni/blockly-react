@@ -10,17 +10,17 @@ class Code extends React.Component{
 		result : 0
 	};
 	render(){
-		const { result } = this.state;
-        return (
+		let { result } = this.state;
+		let codebook = "~"; 
+		return (
 			<section className="code_blank">
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							this.setState({
-								result : code 
-							});
+							codebook = code;
 							console.log(code, workspace);
+							console.log(codebook);
 						}}
 						appearance={
 							{
