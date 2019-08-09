@@ -57,7 +57,8 @@ const helloWorld =  {
       },
     },
     generator: (block) => {
-      const message = `'${block.getFieldValue('NAME')}'` || '\'\'';
+	  const message = `'${block.getFieldValue('NAME')}'` || '\'\'';
+	  console.log('message is '+message);
       const code = `console.log('Hello ${message}')`;
       return [code, Blockly.JavaScript.ORDER_MEMBER];
     },
