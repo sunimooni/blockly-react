@@ -10,7 +10,7 @@ class Code extends React.Component{
         return (
 			<section className="code_blank">
 				<BlocklyDrawer
-					tools={[helloWorld, test_print]}
+					tools={[helloWorld, test_print,test_operation]}
 					onChange={(code, workspace) => {console.log(code, workspace);}}
 					appearance={
 						{
@@ -43,7 +43,7 @@ const helloWorld =  {
       init: function () {
         this.jsonInit(
 		{
-          message0: 'Hello %1 is %2',
+          message0: 'Hello %1',
           args0: [{
               type: 'field_input',
               name: 'NAME',
@@ -77,6 +77,23 @@ const test_print = {
 						},],
 						colour : 100,
 						tooltip : 'print(_)',
+				}
+			);
+		},
+	},
+};
+const test_operation = {
+	name : 'test_operation',
+	category : 'test',
+	block : {
+		init : function(){
+			this.jsonInit(
+				{
+					type : "field_dropdown",
+					name : "select",
+					option : [
+						["+","+"],["-","-"],["*","*"],["/","/"]
+					]
 				}
 			);
 		},
