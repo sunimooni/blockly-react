@@ -1,4 +1,5 @@
 import React from 'react';
+import './Tutorial.css';
 
 class Tutorial extends React.Component{
 
