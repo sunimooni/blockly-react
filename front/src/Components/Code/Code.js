@@ -38,8 +38,9 @@ const helloWorld =  {
     category: 'Demo',
     block: {
       init: function () {
-        this.jsonInit({
-          message0: 'Hello %1',
+        this.jsonInit(
+		{
+          message0: 'Hello %1 is %2',
           args0: [
             {
               type: 'field_input',
@@ -50,7 +51,8 @@ const helloWorld =  {
           output: 'String',
           colour: 160,
           tooltip: 'Says Hello',
-        });
+		}
+		);
       },
     },
     generator: (block) => {
