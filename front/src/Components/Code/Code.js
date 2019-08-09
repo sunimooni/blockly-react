@@ -20,6 +20,7 @@ class Code extends React.Component{
 						onChange={(code, workspace) => {
 							this.setState({ code });
 							console.log(code, workspace);
+							console.log(this.state.code)
 						}}
 						appearance={
 							{
