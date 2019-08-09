@@ -15,10 +15,9 @@
 	height: 420px;
 }
 .code_gen {
-	margin: 0px;
-	padding-top: 20px;
+	margin: 0;
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	background-color: deepskyblue;
 	color: white;
 	text-align: center;
@@ -26,6 +25,6 @@
 
 .code_coded {
 	widows: 100%;
-	height: 360px;
+	height: 370px;
 	background-color: azure;
 }
