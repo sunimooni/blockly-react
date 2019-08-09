@@ -81,11 +81,11 @@ const test_print = {
 			);
 		},
 	},
-	generator: (block) => {
-		const message = Blockly.Python.valueToCode(block,'print',Blockly.Python.ORDER_ATOMIC);
-		const code = `print(${message})`;
-		return [code, Blockly.Python.ORDER_ATOMIC];
-	},
+    generator: (block) => {
+		const message = `'${block.getFieldValue('print')}'` || '\'\'';
+		const code = `${message}`;
+		return [code, Blockly.JavaScript.ORDER_MEMBER];
+	  },  
 };
 const test_operation = {
 	name : 'test_operation',
