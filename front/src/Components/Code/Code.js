@@ -84,7 +84,7 @@ const test_print = {
 	generator: (block) => {
 		const message = `'${block.getFieldValue('print')}'`;
 		const code = `print('${message}')`;
-		return [code, Blockly.Python.ORDER_NONE];
+		return [code, Blockly.JavaScript.ORDER_MEMBER];
 	},
 };
 const test_operation = {
@@ -111,7 +111,7 @@ const test_operation = {
 	generator: (block) => {
 		const message = `'${block.getFieldValue('select')}'`;
 		const code = `'${message}'`;
-		return [code, Blockly.Python.ORDER_NONE];
+		return [code, Blockly.JavaScript.ORDER_MEMBER];
 	},	
 };
 
@@ -159,7 +159,7 @@ const short_math = {
 		const num_2 = `'${block.getFieldValue('number_b')}'`;
 		const sel = `'${block.getFieldValue('select_one')}'`;
 		const code = num_1+sel+"= "+num_2;
-		return [code, Blockly.Python.ORDER_NONE];
+		return [code, Blockly.JavaScript.ORDER_MEMBER];
 	},
 };
 
