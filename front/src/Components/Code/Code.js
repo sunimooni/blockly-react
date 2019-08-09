@@ -9,6 +9,11 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
+	get_result = (codebook) => {
+		this.setState( {
+			result : codebook
+		})
+	}
 	render(){
 		let { result } = this.state;
 		let codebook = "~"; 
@@ -52,12 +57,16 @@ class Code extends React.Component{
 								<h3>{result}</h3>
 							}
 						</div>
+						<div>
+							<button onClick = {get_result(codebook)}> code gen</button>
+						</div>
 					</div>
 				</div>
 			</section>
 		)
     }
 }
+
 
 const helloWorld =  {
     name: 'HelloWorld',
