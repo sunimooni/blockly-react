@@ -122,7 +122,9 @@ const short_math = {
 						{
 							type : 'field_dropdown',
 							name : 'select_one',
-
+							options : [
+								["+","+"],["-","-"],["*","*"],["/","/"]
+							],
 						},
 						{
 							type : 'input_dummy',
