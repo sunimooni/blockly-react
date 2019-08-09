@@ -9,9 +9,9 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
-	get_result = (code) => {
-		this.setState({ result : code })
-	}
+	
+		
+	
 	render(){
 		const {result} = this.state;
 		return (
@@ -20,7 +20,7 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-
+							this.setState({ result : code });
 							console.log(code, workspace);
 						}}
 						appearance={
