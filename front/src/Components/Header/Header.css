@@ -9,9 +9,22 @@
     width: 50%;
     height: 100%;
 }
+.Header_logo > h1 {
+    margin: auto;
+    padding-left: 10px;
+    color: white;
+}
 
 .User_Info {
     display: inline-block;
     width: 50%;
     height: 100%;
+    text-align: right;
+}
+.User_Info > ul {
+    list-style: none;
+}
+.User_Info > li {
+    color: white;
+    float: left;
 }
