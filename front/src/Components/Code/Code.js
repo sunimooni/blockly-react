@@ -105,5 +105,43 @@ const test_operation = {
 	},
 };
 
+const short_math = {
+	name : 'short_math',
+	category : 'test',
+	block : {
+		init : function(){
+			this.jsonInit(
+				{
+					message0 : '%1 %2 = %3 %4',
+					args0 : [
+						{
+							type : 'input_value',
+							name : 'number_a',
+							check : 'Number'
+						},
+						{
+							type : 'field_dropdown',
+							name : 'select_one',
+
+						},
+						{
+							type : 'input_dummy',
+						},
+						{
+							type : 'input_value',
+							name : 'number_b',
+							check : 'Number'
+						}
+					],
+					colour : 360,
+					tooltip : 'short version of arithmetic calculations',
+					inputsInline : true,
+					nextStatement : null,
+					previousStatement : null,
+				}
+			);
+		},
+	},
+};
 
 export default Code;
