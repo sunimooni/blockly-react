@@ -3,6 +3,8 @@ import React from 'react';
 class Code extends React.Component{
 
     render(){
-        return <div></div>
+        return <div>code</div>
     }
 }
+
+export default Code;
