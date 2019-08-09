@@ -4,7 +4,19 @@ import './Tutorial.css';
 class Tutorial extends React.Component{
 
     render(){
-        return <div>tutorial</div>
+        return (
+	<section className="course_container">
+		<div className="course_title">
+			1		
+		</div>
+		<div className="course_tutorial">
+			2
+		</div>
+		<div className="course_progress">
+			3
+		</div>
+	</section>	
+	)
     }
 }
 

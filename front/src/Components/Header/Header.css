@@ -5,19 +5,12 @@
 }
 
 .Header_logo {
-    display: inline-block;
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 .Header_logo > h1 {
-    margin: auto;
-    padding-left: 20px;
-    color: white;
-}
-
-.User_Info {
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    text-align: right;
+	margin : 0;
+	padding : 1.2rem;
+	color : white;
+	text-align : center;
 }
