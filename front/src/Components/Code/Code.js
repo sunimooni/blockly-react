@@ -103,6 +103,7 @@ const test_operation = {
 							["+","+"],["-","-"],["*","*"],["/","/"]
 						],
 					},],
+					output : 'String',
 					colour : 120,
 					tooltip : '+-*/',
 				}
@@ -112,7 +113,7 @@ const test_operation = {
 	generator: (block) => {
 		const message = `'${block.getFieldValue('select')}'`;
 		const code = `${message}`;
-		return [code, Blockly.JavaScript.ORDER_MEMBER];
+		return [code, Blockly.Python.ORDER_ATOMIC];
 	},	
 };
 
@@ -146,6 +147,7 @@ const short_math = {
 							check : 'Number'
 						}
 					],
+					output : 'String',
 					colour : 360,
 					tooltip : 'short version of arithmetic calculations',
 					inputsInline : true,
@@ -159,7 +161,7 @@ const short_math = {
 		const num_1 = `'${block.getFieldValue('number_a')}'`; 
 		const num_2 = `'${block.getFieldValue('number_b')}'`;
 		const sel = `'${block.getFieldValue('select_one')}'`;
-		const code = num_1+sel+"= "+num_2;
+		const code = `${num_1}+${sel}+"= "+${num_2}`;
 		return [code, Blockly.JavaScript.ORDER_MEMBER];
 	},
 };
