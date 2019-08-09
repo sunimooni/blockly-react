@@ -9,28 +9,36 @@ class Code extends React.Component{
     render(){
         return (
 			<section className="code_blank">
-				<BlocklyDrawer
-					tools={[helloWorld, test_print,test_operation, short_math]}
-					onChange={(code, workspace) => {console.log(code, workspace);}}
-					appearance={
-						{
-							categories: {
-								Demo: {
-									colour: '270'
+				<div className ="code_block">
+					<BlocklyDrawer
+						tools={[helloWorld, test_print,test_operation, short_math]}
+						onChange={(code, workspace) => {
+							console.log(code, workspace);
+						}}
+						appearance={
+							{
+								categories: {
+									Demo: {
+										colour: '270'
+									},
+									test : {
+										colour: '160'
+									},
 								},
-								test : {
-									colour: '160'
-								},
-							},
+							}
 						}
-					}
-				>
-					<Category name="Variables" custom="VARIABLE" />
-					<Category name="Values">
-						<Block type="math_number" />
-						<Block type="text" />
-					</Category>
-				</BlocklyDrawer>
+					>
+						<Category name="Variables" custom="VARIABLE" />
+						<Category name="Values">
+							<Block type="math_number" />
+							<Block type="text" />
+						</Category>
+					</BlocklyDrawer>
+				</div>
+				<div className = "code_generation">
+					<h3>python code</h3>
+					<div className = "code_coded"> </div>
+				</div>
 			</section>
 		)
     }
