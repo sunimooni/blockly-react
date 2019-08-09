@@ -10,7 +10,7 @@ class Code extends React.Component{
         return (
 			<section className="code_blank">
 				<BlocklyDrawer
-					tools={[helloWorld, test_print,test_operation]}
+					tools={[helloWorld, test_print,test_operation, short_math]}
 					onChange={(code, workspace) => {console.log(code, workspace);}}
 					appearance={
 						{
