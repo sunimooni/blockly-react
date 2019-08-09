@@ -36,6 +36,12 @@
 	padding: 10px;
 }
 .terminal > h1 {
+	padding: 30px;
 	text-align: center;
 	color: lightgray;
+}
+.terminal > h3 {
+	padding: 20px;
+	text-align: left;
+	color: black;
 }

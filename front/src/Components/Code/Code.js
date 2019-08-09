@@ -7,7 +7,7 @@ import './Code.css';
 
 class Code extends React.Component{
 	state = {
-		result : "empty"
+		result : 0
 	};
 	render(){
 		const { result } = this.state;
@@ -17,9 +17,9 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-//							this.setState({
-//								result : code 
-//							});
+							this.setState({
+								result : code 
+							});
 							console.log(code, workspace);
 						}}
 						appearance={
@@ -46,7 +46,11 @@ class Code extends React.Component{
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							<h1>{ result }</h1>
+							{result == 0 ?
+								<h1>EMPTY</h1>
+							:
+								<h3>{result}</h3>
+							}
 						</div>
 					</div>
 				</div>
