@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Three from './Three';
+import App from './App';
 
-
-ReactDOM.render(<Three />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('main_container'));
