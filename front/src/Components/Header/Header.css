@@ -23,10 +23,10 @@
 }
 .User_Info > ul {
     list-style: none;
-    display: inline-block;
-    font-size: 2rem;
+    display: inline;
+    font-size: 8px;
 }
 .User_Info > li {
     color: white;
-    display: inline-block;
+    display: inline;
 }
