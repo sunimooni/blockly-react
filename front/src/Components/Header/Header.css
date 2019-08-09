@@ -6,7 +6,7 @@
 
 .Header_logo {
     display: inline-block;
-    width: 50%;
+    width: 49%;
     height: 100%;
 }
 .Header_logo > h1 {
@@ -17,15 +17,14 @@
 
 .User_Info {
     display: inline-block;
-    width: 50%;
+    width: 49%;
     height: 100%;
     text-align: right;
 }
 .User_Info > ul {
     list-style: none;
     display: inline;
-    font-size: 8px;
-}
+ }
 .User_Info > li {
     color: white;
     display: inline;
