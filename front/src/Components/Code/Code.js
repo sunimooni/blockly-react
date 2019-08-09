@@ -81,6 +81,11 @@ const test_print = {
 			);
 		},
 	},
+	generator: (block) => {
+		const message = `'${block.getFieldValue('print')}'`;
+		const code = `print('${message}')`;
+		return [code, Blockly.Python.ORDER_NONE];
+	},
 };
 const test_operation = {
 	name : 'test_operation',
@@ -103,6 +108,11 @@ const test_operation = {
 			);
 		},
 	},
+	generator: (block) => {
+		const message = `'${block.getFieldValue('select')}'`;
+		const code = `'${message}'`;
+		return [code, Blockly.Python.ORDER_NONE];
+	},	
 };
 
 const short_math = {
@@ -143,6 +153,13 @@ const short_math = {
 				}
 			);
 		},
+	},
+	generator: (block) => {
+		const num_1 = `'${block.getFieldValue('number_a')}'`; 
+		const num_2 = `'${block.getFieldValue('number_b')}'`;
+		const sel = `'${block.getFieldValue('select_one')}'`;
+		const code = num_1+sel+"= "+num_2;
+		return [code, Blockly.Python.ORDER_NONE];
 	},
 };
 
