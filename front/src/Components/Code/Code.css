@@ -22,10 +22,12 @@
 	background-color: deepskyblue;
 	color: white;
 	text-align: center;
+	display: block;
 }
 
 .code_coded {
 	widows: 100%;
 	height: 360px;
 	background-color: azure;
+	display: block;
 }
