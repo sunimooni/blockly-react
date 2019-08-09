@@ -84,8 +84,8 @@ const test_print = {
 	},
     generator: (block) => {
 		const message = `'${block.getFieldValue('PRINT')}'` || '\'\'';
-		const code = `console.log('Hello ${message}')`;
-		return [code, Blockly.JavaScript.ORDER_MEMBER];
+		const code = `print(${message})`;
+		return [code, Blockly.Python.ORDER_ATOMIC];
 	  },  
 };
 const test_operation = {
