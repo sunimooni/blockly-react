@@ -9,23 +9,16 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
-	get_result = (codebook) => {
-		this.setState( {
-			result : codebook
-		})
-	}
 	render(){
-		let { result } = this.state;
-		let codebook = "~"; 
+		let result = 0
 		return (
 			<section className="code_blank">
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							codebook = code;
+							result = code;
 							console.log(code, workspace);
-							console.log(codebook);
 						}}
 						appearance={
 							{
@@ -56,9 +49,6 @@ class Code extends React.Component{
 							:
 								<h3>{result}</h3>
 							}
-						</div>
-						<div>
-							<button onClick = {this.get_result(codebook)}> code gen</button>
 						</div>
 					</div>
 				</div>
