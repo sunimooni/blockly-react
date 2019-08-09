@@ -58,7 +58,7 @@ class Code extends React.Component{
 							}
 						</div>
 						<div>
-							<button onClick = {get_result(codebook)}> code gen</button>
+							<button onClick = {this.get_result(codebook)}> code gen</button>
 						</div>
 					</div>
 				</div>
