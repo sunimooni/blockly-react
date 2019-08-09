@@ -9,8 +9,8 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
-	get_result = async(code) => {
-		await this.setState({ result : code })
+	get_result = (code) => {
+		this.setState({ result : code })
 	}
 	render(){
 		const {result} = this.state;
@@ -19,8 +19,8 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onChange={(code, workspace) => {
-							this.get_result(code);
+						onChange={async (code, workspace) => {
+							await this.get_result(code);
 							console.log(code, workspace);
 						}}
 						appearance={
