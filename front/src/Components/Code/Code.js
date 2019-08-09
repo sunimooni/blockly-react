@@ -17,9 +17,9 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							this.setState({
-								result : code 
-							});
+//							this.setState({
+//								result : code 
+//							});
 							console.log(code, workspace);
 						}}
 						appearance={
@@ -46,7 +46,7 @@ class Code extends React.Component{
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							{ result }
+							<h1>{ result }</h1>
 						</div>
 					</div>
 				</div>
