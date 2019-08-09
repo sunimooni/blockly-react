@@ -1,8 +1,17 @@
 .Header {
     background-color: dodgerblue;
-    color : white;
-    font-size: 2rem;
-    text-align: center;
     width: 100%;
     height: 80px;
+}
+
+.Header_logo {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+.User_Info {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
 }
