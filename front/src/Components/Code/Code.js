@@ -9,16 +9,18 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
+	get_result = (code) => {
+		this.setState({ result : code })
+	}
 	render(){
-		let result = 0
+		const {result} = this.state;
 		return (
 			<section className="code_blank">
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							result = code;
-							console.log(result);
+							this.get_result(code);
 							console.log(code, workspace);
 						}}
 						appearance={
