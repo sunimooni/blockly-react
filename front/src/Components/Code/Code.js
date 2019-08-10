@@ -51,7 +51,7 @@ class Code extends React.Component{
 							}
 						</div>
 					</div>
-					<button onClick={this.setState({result : sub_code})}>submit</button>
+					<button onClick={(sub_code) => {this.setState({result : sub_code})}}>submit</button>
 				</div>
 			</section>
 		)
