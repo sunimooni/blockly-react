@@ -5,14 +5,12 @@ import BlocklyDrawer, {Block, Category} from 'react-blockly-drawer';
 
 import './Code.css';
 
+let comment = "";
+
 class Code extends React.Component{
 	state = {
-		isReady : 0,
-		result : 0
+		result : ""
 	};
-	getResult = (codee) => {
-		this.setState({result: codee});
-	}
 	render(){
 		return (
 			<section className="code_blank">
@@ -20,7 +18,8 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-								console.log(code, workspace);
+							comment = code;
+							console.log(code, workspace);
 						}}
 						appearance={
 							{
@@ -40,14 +39,14 @@ class Code extends React.Component{
 							<Block type="math_number" />
 							<Block type="text" />
 						</Category>
-						<Category name ="Submit" onClick={this.setState({result : code})} />
 					</BlocklyDrawer>
+					<button onClick ={this.setState({result : comment})}>submit</button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							{this.state.result === 0 ?
+							{this.state.result === "" ?
 								<h1>EMPTY</h1>
 							:
 								<h3>{this.state.result}</h3>
