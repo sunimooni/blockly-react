@@ -11,11 +11,6 @@ class Code extends React.Component{
 	state = {
 		result : ""
 	};
-	setResult = () => {
-		this.setState({
-			result : comment
-		})
-	}
 	render(){
 		return (
 			<section className="code_blank">
@@ -45,16 +40,15 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
-					<button onClick ={this.setResult()}>submit</button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							{this.state.result === "" ?
+							{comment === "" ?
 								<h1>EMPTY</h1>
 							:
-								<h3>{this.state.result}</h3>
+								<h3>{comment}</h3>
 							}
 						</div>
 					</div>
