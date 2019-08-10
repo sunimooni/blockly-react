@@ -36,14 +36,12 @@ class Code extends React.Component{
 						}
 					>
 						<Category name="Variables" custom="VARIABLE" />
-						<Category name="Values">
+						<Category name="Values" >
 							<Block type="math_number" />
 							<Block type="text" />
 						</Category>
+						<Category name ="Submit" onClick={this.setState({result : code})} />
 					</BlocklyDrawer>
-					<button onClick={this.setState({
-						result : code
-					})}></button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
