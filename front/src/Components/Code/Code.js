@@ -7,6 +7,7 @@ import './Code.css';
 
 class Code extends React.Component{
 	state = {
+		isReady : 0,
 		result : 0
 	};
 	getResult = (codee) => {
@@ -40,6 +41,9 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
+					<button onClick={this.setState({
+						result : code
+					})}></button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
