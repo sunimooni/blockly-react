@@ -10,14 +10,12 @@ class Code extends React.Component{
 		result : 0
 	};
 	render(){
-		let sub_code = 0;
 		return (
 			<section className="code_blank">
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							sub_code = code;
 							console.log(code, workspace);
 						}}
 						appearance={
@@ -39,6 +37,7 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
+					<button onClick = {(code, workspace) => {console.log(code, workspace);}}>submit</button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
@@ -51,7 +50,6 @@ class Code extends React.Component{
 							}
 						</div>
 					</div>
-					<button onClick={(sub_code) => {this.setState({result : sub_code})}}>submit</button>
 				</div>
 			</section>
 		)
