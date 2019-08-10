@@ -19,10 +19,7 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							if(code !== ""){
 								console.log(code, workspace);
-								this.getResult(code);
-							}
 						}}
 						appearance={
 							{
