@@ -14,14 +14,14 @@ class Code extends React.Component{
 	}
 
 	render(){
+		let sub_code = 0;
 		return (
 			<section className="code_blank">
 				<div className ="code_block">
-					<form>
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onSubmit={(code, workspace) => {
-							this.result_change(code);
+						onChange={(code, workspace) => {
+							sub_code = code;
 							console.log(code, workspace);
 						}}
 						appearance={
@@ -43,11 +43,9 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
-					<input type="submit" value="Submit" />
-					</form>
 				</div>
 				<div className = "code_generation">
-					<div className = "code_gen"><h2>python code</h2></div>
+					<div className = "code_gen" onClick = {this.result_change(sub_code)}><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
 							{this.state.result === 0 ?
