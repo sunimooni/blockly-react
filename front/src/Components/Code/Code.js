@@ -19,7 +19,7 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onBlur={(code, workspace) => {
+						onChange={(code, workspace) => {
 							this.result_change(code);
 							console.log(code, workspace);
 						}}
