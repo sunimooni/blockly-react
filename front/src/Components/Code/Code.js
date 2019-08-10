@@ -9,10 +9,6 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
-	result_change = (codee) => {
-		this.setState({ result : codee })
-	}
-
 	render(){
 		let sub_code = 0;
 		return (
@@ -45,7 +41,7 @@ class Code extends React.Component{
 					</BlocklyDrawer>
 				</div>
 				<div className = "code_generation">
-					<div className = "code_gen" onClick = {this.result_change(sub_code)}><h2>python code</h2></div>
+					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
 							{this.state.result === 0 ?
@@ -55,6 +51,7 @@ class Code extends React.Component{
 							}
 						</div>
 					</div>
+					<button onClick={this.setState({result : sub_code})}>submit</button>
 				</div>
 			</section>
 		)
