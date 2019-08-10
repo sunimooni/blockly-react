@@ -9,6 +9,9 @@ class Code extends React.Component{
 	state = {
 		result : 0
 	};
+	getResult = (codee) => {
+		this.setState({result: codee});
+	}
 	render(){
 		return (
 			<section className="code_blank">
@@ -16,7 +19,10 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							console.log(code, workspace);
+							if(code !== ""){
+								console.log(code, workspace);
+								this.getResult(code);
+							}
 						}}
 						appearance={
 							{
