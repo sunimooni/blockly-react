@@ -1,5 +1,4 @@
-.course_container{
-	float : left;	
+.course_container{	
 	width : 30%;
 	height : 820px;
 	background-color : #2f2f2f;
@@ -9,14 +8,23 @@
 .course_title {
  	width : 100%;
 	height : 100px;
+	margin : 5px;
+	background-color: lemonchiffon;
+	color: black;
 }
 
 .course_tutorial {
 	width : 100%;
 	height : 620px;
+	background-color: lemonchiffon;
 }
 
 .course_progress {
 	width : 100%;
 	height : 100px;
+}
+
+.course_button {
+	width: 33%;
+	height: 100px;
 }
