@@ -7,7 +7,7 @@ class Tutorial extends React.Component{
         return (
 	<section className="course_container">
 		<div className="course_title">
-			<h3>Machine Learning</h3>
+			<h1>Machine Learning</h1>
 		</div>
 		<div className="course_tutorial">
 			2
