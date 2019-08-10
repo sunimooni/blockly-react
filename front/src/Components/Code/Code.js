@@ -16,7 +16,7 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						blur={(code, workspace) => {
+						onsubmit={(code, workspace) => {
 							this.setState({result : code})
 							console.log(code, workspace);
 						}}
@@ -38,6 +38,7 @@ class Code extends React.Component{
 							<Block type="math_number" />
 							<Block type="text" />
 						</Category>
+						<input type="submit" value="제출" />
 					</BlocklyDrawer>
 				</div>
 				<div className = "code_generation">
