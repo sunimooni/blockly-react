@@ -15,7 +15,7 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onChange={(code, workspace) => {
+						onClick={(code, workspace) => {
 							console.log(code, workspace);
 						}}
 						appearance={
@@ -37,7 +37,6 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
-					<button onClick = {(code, workspace) => {console.log(code, workspace);}}>submit</button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
