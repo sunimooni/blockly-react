@@ -11,6 +11,11 @@ class Code extends React.Component{
 	state = {
 		result : ""
 	};
+	setResult = () => {
+		this.setState({
+			result : comment
+		})
+	}
 	render(){
 		return (
 			<section className="code_blank">
@@ -40,7 +45,7 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
-					<button onClick ={this.setState({result : comment})}>submit</button>
+					<button onClick ={this.setResult()}>submit</button>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
