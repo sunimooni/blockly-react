@@ -9,8 +9,12 @@ let comment = "";
 
 class Code extends React.Component{
 	state = {
-		result : ""
+		comment : ""
 	};
+	getCode = () => {
+		this.setState({ comment });
+	}
+
 	render(){
 		return (
 			<section className="code_blank">
@@ -52,10 +56,8 @@ class Code extends React.Component{
 								<h3>{comment}</h3>
 							}
 						</div>
-						<div className= "button" onClick = {this.setState({result : comment})}>
-							sdklfjs
-						</div>
 					</div>
+					<button onClick = {this.getCode()}>submit</button>
 				</div>
 			</section>
 		)
