@@ -1,4 +1,5 @@
 .course_container{	
+	float: left;
 	width : 30%;
 	height : 820px;
 	background-color : #2f2f2f;
