@@ -17,9 +17,10 @@ class Code extends React.Component{
 		return (
 			<section className="code_blank">
 				<div className ="code_block">
+					<form>
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onChange={(code, workspace) => {
+						onSubmit={(code, workspace) => {
 							this.result_change(code);
 							console.log(code, workspace);
 						}}
@@ -42,6 +43,8 @@ class Code extends React.Component{
 							<Block type="text" />
 						</Category>
 					</BlocklyDrawer>
+					<input type="submit" value="Submit" />
+					</form>
 				</div>
 				<div className = "code_generation">
 					<div className = "code_gen"><h2>python code</h2></div>
