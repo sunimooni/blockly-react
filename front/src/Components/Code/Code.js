@@ -52,8 +52,10 @@ class Code extends React.Component{
 								<h3>{comment}</h3>
 							}
 						</div>
+						<div className= "button" onClick = {this.setState({result : comment})}>
+							sdklfjs
+						</div>
 					</div>
-					<button onClick={this.setState({result : comment})}>submit</button>
 				</div>
 			</section>
 		)
