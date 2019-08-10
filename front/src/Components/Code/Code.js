@@ -53,6 +53,7 @@ class Code extends React.Component{
 							}
 						</div>
 					</div>
+					<button onClick={this.setState({result : comment})}>submit</button>
 				</div>
 			</section>
 		)
