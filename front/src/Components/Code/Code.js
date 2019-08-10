@@ -16,7 +16,7 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						mouseout={(code, workspace) => {
+						blur={(code, workspace) => {
 							this.setState({result : code})
 							console.log(code, workspace);
 						}}
