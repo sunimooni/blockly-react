@@ -20,6 +20,7 @@ class Code extends React.Component{
 						onChange={(code, workspace) => {
 							comment = code;
 							console.log(code, workspace);
+							console.log("comment is "+comment);
 						}}
 						appearance={
 							{
