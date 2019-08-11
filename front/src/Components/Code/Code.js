@@ -11,10 +11,6 @@ class Code extends React.Component{
 	state = {
 		comment : ""
 	};
-	getCode = () => {
-		this.setState({ comment });
-	}
-
 	render(){
 		return (
 			<section className="code_blank">
@@ -57,7 +53,6 @@ class Code extends React.Component{
 							}
 						</div>
 					</div>
-					<button onClick = {this.getCode()}>submit</button>
 				</div>
 			</section>
 		)
