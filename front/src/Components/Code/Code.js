@@ -13,7 +13,9 @@ let result = 0;
 let work = 0;
 
 class Code extends React.Component{
-
+	state = {
+		x_Code : 0
+	}
 	render(){
 		return (
 			<section className="code_blank">
@@ -51,15 +53,12 @@ class Code extends React.Component{
 					</BlocklyDrawer>
 				</div>
 				<div className = "code_generation">
-					<div className = "code_gen"><h2>python code</h2></div>
+					<div className = "code_gen" onClick = {()=>this.setState({x_Code : result})}><h2>Generating Python Code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							<div>
-							{this.props.blocks}
-							</div>
-							<div>
-							{this.props.workspace}
-							</div>
+							{this.state.x_Code 
+								? <div>{this.state.x_Code}</div> 
+								: <div>Empty</div>}
 						</div>
 					</div>
 				</div>
