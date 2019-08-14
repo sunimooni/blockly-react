@@ -17,7 +17,7 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-								if(!code){
+							if(code !== ""){
 								console.log(this.props.blocks, this.props.workspace);
 								this.props.storeState(code);
 								this.props.storeWork(workspace);
