@@ -45,8 +45,12 @@ class Code extends React.Component{
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
+							<div>
 							{this.props.blocks}
+							</div>
+							<div>
 							{this.props.workspace}
+							</div>
 						</div>
 					</div>
 				</div>
