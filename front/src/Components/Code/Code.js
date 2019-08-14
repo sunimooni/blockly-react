@@ -10,6 +10,7 @@ import BlocklyDrawer, {Block, Category} from 'react-blockly-drawer';
 import './Code.css';
 
 let result = 0;
+let work = 0;
 
 class Code extends React.Component{
 
@@ -22,7 +23,9 @@ class Code extends React.Component{
 						onChange={(code, workspace) => {
 							if(code !== ""){
 								result = code;
+								work = workspace;
 								console.log(result);
+								console.log(workspace);
 							}
 						}
 						}
