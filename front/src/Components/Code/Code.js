@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreator} from 'redux';
+import {bindActionCreators} from 'redux';
 import { storeState } from '../../action/index';
 import { storeWork } from '../../action/index2';
 
@@ -66,7 +66,7 @@ function mapStateToProps(state){
 	};
 }
 function mapDispatchToProps(dispatch){
-	return bindActionCreator({storeState : storeState, storeWork : storeWork}, dispatch);
+	return bindActionCreators({storeState : storeState, storeWork : storeWork}, dispatch);
 }
 
 
