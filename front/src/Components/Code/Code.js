@@ -19,7 +19,8 @@ class Code extends React.Component{
 						onChange={(code, workspace) => {
 							console.log(code);
 							console.log(workspace);
-						}}
+						}
+						}
 						appearance={
 							{
 								categories: {
@@ -38,6 +39,7 @@ class Code extends React.Component{
 							<Block type="math_number" />
 							<Block type="text" />
 						</Category>
+						console.log('1231');
 					</BlocklyDrawer>
 				</div>
 				<div className = "code_generation">
