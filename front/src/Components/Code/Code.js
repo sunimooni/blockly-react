@@ -10,6 +10,9 @@ import BlocklyDrawer, {Block, Category} from 'react-blockly-drawer';
 import './Code.css';
 
 class Code extends React.Component{
+	state = {
+		code : 0
+	}
 	render(){
 		return (
 			<section className="code_blank">
@@ -18,6 +21,7 @@ class Code extends React.Component{
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
 							if(code !== ""){
+								this.setState({ code });
 								console.log(code);
 								console.log(workspace);
 							}
