@@ -25,7 +25,7 @@ class Code extends React.Component{
 								result = code;
 								work = workspace;
 								console.log(result);
-								console.log(workspace);
+								console.log(work);
 							}
 						}
 						}
