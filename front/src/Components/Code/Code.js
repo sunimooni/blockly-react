@@ -1,4 +1,8 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreator} from 'redux';
+import { storeState } from '../../action/index';
+import { storeWork } from '../../action/index2';
 
 import Blockly from 'node-blockly/browser';
 import BlocklyDrawer, {Block, Category} from 'react-blockly-drawer';
@@ -14,6 +18,8 @@ class Code extends React.Component{
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
 							console.log(code, workspace);
+							this.props.storeState(code);
+							this.props.storeWork(workspace);
 						}}
 						appearance={
 							{
@@ -39,11 +45,8 @@ class Code extends React.Component{
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							{/* {comment === "" ?
-								<h1>EMPTY</h1>
-							:
-								<h3>{comment}</h3>
-							} */}
+							{this.props.blocks}
+							{this.props.workspace}
 						</div>
 					</div>
 				</div>
@@ -51,6 +54,18 @@ class Code extends React.Component{
 		)
     }
 }
+
+function mapStateToProps(state){
+	return {
+		blocks : state.blocks,
+		workspace : state.workspace
+	};
+}
+function mapDispatchToProps(dispatch){
+	return bindActionCreator({storeState : storeState, storeWork : storeWork}, dispatch);
+}
+
+
 
 const helloWorld =  {
     name: 'HelloWorld',
@@ -182,4 +197,4 @@ const short_math = {
 	},
 };
 
-export default Code;
+export default connect(mapStateToProps,mapDispatchToProps)(Code);
