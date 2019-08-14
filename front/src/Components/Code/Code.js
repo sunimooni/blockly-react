@@ -17,8 +17,10 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							console.log(code);
-							console.log(workspace);
+							if(code !== ""){
+								console.log(code);
+								console.log(workspace);
+							}
 						}
 						}
 						appearance={
@@ -39,7 +41,6 @@ class Code extends React.Component{
 							<Block type="math_number" />
 							<Block type="text" />
 						</Category>
-						console.log('1231');
 					</BlocklyDrawer>
 				</div>
 				<div className = "code_generation">
