@@ -16,7 +16,7 @@ class Code extends React.Component{
 				<div className ="code_block">
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
-						onChange={(code, workspace) => {
+						onChange={(code = this.props.blocks, workspace = this.props.workspace) => {
 							if(code !== ""){
 								console.log(this.props.blocks, this.props.workspace);
 								this.props.storeState(code);
@@ -70,8 +70,6 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
 	return bindActionCreators({storeState : storeState, storeWork : storeWork}, dispatch);
 }
-
-
 
 const helloWorld =  {
     name: 'HelloWorld',
