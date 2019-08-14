@@ -5,12 +5,7 @@ import BlocklyDrawer, {Block, Category} from 'react-blockly-drawer';
 
 import './Code.css';
 
-let comment = "";
-
 class Code extends React.Component{
-	state = {
-		comment : ""
-	};
 	render(){
 		return (
 			<section className="code_blank">
@@ -18,9 +13,7 @@ class Code extends React.Component{
 					<BlocklyDrawer
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
-							comment = code;
 							console.log(code, workspace);
-							console.log("comment is "+comment);
 						}}
 						appearance={
 							{
@@ -46,11 +39,11 @@ class Code extends React.Component{
 					<div className = "code_gen"><h2>python code</h2></div>
 					<div className = "code_coded">
 						<div className = "terminal">
-							{comment === "" ?
+							{/* {comment === "" ?
 								<h1>EMPTY</h1>
 							:
 								<h3>{comment}</h3>
-							}
+							} */}
 						</div>
 					</div>
 				</div>
