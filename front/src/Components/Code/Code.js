@@ -19,6 +19,7 @@ class Code extends React.Component{
 			<section className="code_blank">
 				<div className ="code_block">
 					<BlocklyDrawer
+						workspaceXML = { work ? work : null }
 						tools={[helloWorld, test_print,test_operation, short_math]}
 						onChange={(code, workspace) => {
 							if(code !== ""){
